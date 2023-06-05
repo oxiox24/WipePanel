@@ -1,16 +1,12 @@
-"use client"
-import Image from 'next/image'
-import Link from 'next/link'
-import * as React from 'react';
+import Link from "next/link";
 
-
-export default function Home() {
-  return (
-   <>
-   <div className='tracking-wider'>
-<div className="navbar bg-base-100">
+export default function serverInfo() {
+    return (
+        <>
+        <div className="tracking-wider">
+        <div className="navbar bg-base-100">
   <div className="navbar-start">
-    <div className="dropdown z-10">
+  <div className="dropdown z-10">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
@@ -28,12 +24,11 @@ export default function Home() {
         <li><a>Credit: x$</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">WipePanel</a>
+    <Link className="btn btn-ghost normal-case text-xl" href={"/"}>WipePanel</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><a>Create A Server</a></li>
-      <div className='z-10'>
       <li tabIndex={0}>
         <details>
           <summary>My Servers</summary>
@@ -43,50 +38,29 @@ export default function Home() {
           </ul>
         </details>
       </li>
-      </div>
       <li><a>Shop</a></li>
-    
     </ul>
   </div>
   <div className="navbar-end">
+    <a className="btn p-2">Login</a>
   </div>
 </div>
-<div>
-<h1 className='flex items-center justify-center'>Overview</h1>
-<br/>
-<div className='flex items-center justify-center'>
-<div className="card w-96 bg-neutral text-neutral-content  ">
-  <div className="card-body items-center text-center ">
-    <h2 className="card-title">Minecraft-01</h2>
-    <p>Ram: 4g</p>
-    <p>Disk: 64g</p>
-    <p>Cpu: 400%</p>
-    <p>Location : UK</p>
+<div className="flex items-center justify-center">
+<div className="card w-96 shadow-xl bg-slate-700">
+  <figure></figure>
+  <div className="card-body p-40 w-70">
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">Start</button>
-      <Link className="btn btn-ghost" href={'/Serverinfo'}  >More...</Link>
-      </div>
+    </div>
     </div>
   </div>
 </div>
-  <br/>
-  <br/>
-  <br/>
-  <div className='flex items-center justify-center'>
-<div className="stats bg-primary text-primary-content">
-
-  <div className="stat">
-    <div className="stat-title">Account balance</div>
-    <div className="stat-value">$20</div>
-    <div className="stat-actions">
-      <button className="btn btn-sm btn-success">Add funds</button>
-      </div>
-    </div>
-  </div>
-  </div>
-  
-</div>
-</div>
-   </>
-  );
+<br/>
+<div className="flex gap-2 justify-center items-center">
+<button className="btn btn-success">Start</button>
+<button className="btn btn-warning">Stop</button>
+<button className="btn btn-error">Kill</button> 
+ </div> 
+ </div> 
+      </>
+    )
 }

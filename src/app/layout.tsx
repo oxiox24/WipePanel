@@ -1,6 +1,7 @@
 import './globals.css'
 import { Bowlby_One_SC } from 'next/font/google'
 
+
 const BowblyOneSc = Bowlby_One_SC({weight: ['400'], subsets: ['latin'], style: ['normal']})
 
 export const metadata = {
@@ -14,8 +15,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    
     <html lang="en">
       <body className={BowblyOneSc.className}>{children}</body>
     </html>
-  )
+   
+ )
 }
