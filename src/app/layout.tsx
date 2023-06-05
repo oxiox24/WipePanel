@@ -1,7 +1,7 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Bowlby_One_SC } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const BowblyOneSc = Bowlby_One_SC({weight: ['400'], subsets: ['latin'], style: ['normal']})
 
 export const metadata = {
   title: 'WipePanel',
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={BowblyOneSc.className}>{children}</body>
     </html>
   )
 }
